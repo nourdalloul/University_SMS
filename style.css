@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box; 
+}
+button ,  #button1{
+    cursor: pointer;
+    border-radius: 5px;
+}
+div{
+    border: 1px solid rgb(177, 175, 175);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex: 1; 
+}
+h2{
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif ;
+    color: rgb(52, 99, 146);
+    padding-left: 100px;
+    margin: 21px;
+    margin-top: 29px;
+}
+#editStudentDiv h2{
+    padding-left: 160px;
+    margin: 20px;
+}
+hr{
+    margin: 10px 50px 10px 50px;
+}
+a{
+    text-decoration: none;
+}
+.header {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.header h1 {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif ;
+    color: rgb(52, 99, 146);
+    font-size: 25px;
+}
+.footer {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    color: rgb(52, 99, 146);
+    font-size: 14px;
+    margin-top: 600px;
+}
+
+/*View Students Page*/
+#viewStudentsDiv{
+    min-height: 400px; 
+    height: auto;
+    /* height: 50%; */
+    width: 45%;
+    box-shadow: 0 0 4px #9d9fa4, 0 0 11px #9d9fa4, 0 0 18px #9d9fa4;
+    background-color: rgb(246, 247, 248);
+}
+table{
+    margin: 29px 80px ;
+    height: inherit;
+    width: 75%;
+    color: rgb(51, 47, 47);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+table th{
+    background-color:#e0e7ff;
+    color: rgb(52, 99, 146);
+    padding: 12px;
+    font-size: 19px;
+    font-family:'Times New Roman', Times, serif ;
+}
+td{
+    padding: 8px 8px 5px 10px;
+    font-weight: 10px;
+    font-family: Arial, sans-serif;
+    color: rgb(34, 75, 116);
+    font-size: 15px;
+}
+table button{
+    height: 30px;
+    width: 70px;
+    font-size: 15px;
+    border: 1px solid white;
+    color: rgb(236, 232, 232);   
+}
+table #button1{
+    background-color:rgb(33, 145, 33);
+}
+table #button2{
+    background-color: #a52020;
+}
+#viewStudentsButton{
+    background-color:  rgb(52, 99, 146);
+    margin-left: 230px;
+    height: 40px;
+    width: 170px;
+    font-size: 15px;
+    border: 1px solid white;
+}
+#viewStudentsButton:hover {
+    background-color: #1043ec;
+}
+#viewStudentsButton a , table #button1 a{
+    color: white;
+}
+
+/*edit student Page ,add student page */
+#addStudentDiv , #editStudentDiv{
+    height: 50%;
+    width: 40%;
+    box-shadow: 0 0 8px #9d9fa4, 0 0 18px #9d9fa4, 0 0 28px #9d9fa4; 
+    background: linear-gradient(135deg, #4b6fe7, #f8fafc);
+}
+#addStudentDiv div, #editStudentDiv div{
+    height: 85%;
+    width: 80%;
+    background-color: white;
+}
+#addStudentDiv div form ,#editStudentDiv div form{
+    margin-left: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#addStudentDiv div form label ,#editStudentDiv div form label{
+    font-size: 20px;
+    font-weight: 2px;
+    color: #414143;
+}
+#addStudentDiv div form input ,#editStudentDiv div form input{
+    height: 30px;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 7px;
+    outline: none;
+    border: 1px solid #b8c1e5
+}
+#addStudentDiv div #button1 ,#editStudentDiv div #button1{
+    background-color: rgb(22, 72, 163);
+    color: white;
+    margin-left: 150px;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    border: 1px solid white;
+}
+#addStudentDiv div #button2 ,#editStudentDiv div #button2{
+    background-color: rgb(145, 146, 148);
+    color: black;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    border: 1px solid white;
+}
+/* =========================
+   Responsive Design
+   ========================= */
+
+   @media (max-width: 768px) {
+
+    /* الهيدر */
+    .header h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    /* عناوين الصفحات */
+    #viewStudentsDiv h2,
+    #addStudentDiv h2,
+    #editStudentDiv h2 {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    /* الجدول */
+    table {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    /* أزرار الجدول */
+    #button1,
+    #button2 {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+  
+    /* زر إضافة طالب */
+    #viewStudentsButton {
+      width: 100%;
+      margin-top: 15px;
+    }
+  
+    /* صفحات الفورم */
+    #addStudentDiv > div,
+    #editStudentDiv > div {
+      width: 90%;
+      margin: auto;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    /* الفوتر */
+    .footer {
+      font-size: 13px;
+      padding: 10px;
+    }
+  }

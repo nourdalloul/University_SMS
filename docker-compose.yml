@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    container_name: university_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: university_db
+    environment:
+      MYSQL_DATABASE: studentssystem
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: test1234
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
