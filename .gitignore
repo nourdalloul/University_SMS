@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+
+# Docker
+docker-data/
+*.log
+
+# PHP
+vendor/
+
+# MySQL
+*.sql
+
+# Node (لو موجود)
+node_modules/
