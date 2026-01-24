@@ -77,16 +77,21 @@ http://localhost:8080/viewStudents.php
 
 ```
 University_SMS/
-│── docker-compose.yml
+│── src/
+   │── DBConnection.php
+   │── viewStudents.php
+   │── addStudent.php
+   │── editStudent.php
+   │── deleteStudent.php
+   │── style.css
 │── Dockerfile
-│── DBConnection.php
-│── viewStudents.php
-│── addStudent.php
-│── editStudent.php
-│── deleteStudent.php
-│── style.css
-│── screenshots
-│── README.md
+|── docker-compose.yml
+|──.dockerignore
+|── README.md
+|──.gitignore
+│── docs/
+   │── notes.md
+   │── screenshots/
 ```
 
 ---
