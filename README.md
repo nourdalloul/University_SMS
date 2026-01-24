@@ -73,6 +73,15 @@ http://localhost:8080/viewStudents.php
 
 ---
 
+🌐 VPS
+   apt install git /* to install git */
+   apt install docker /* to install docker */
+   git clone https://github.com/nourdalloul/University_SMS.git /* to clone repo */
+   cd University_SMS /* enter the directory */
+   docker build. /* build the docker image */
+   docker compose up /* to run docker compose up */
+   URL : https://sse3.parta.com.tr:8080
+
 ## 📂 Project Structure
 
 ```
