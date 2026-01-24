@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - .:/var/www/html
+      - ./src:/var/www/html
     depends_on:
       - db
 
@@ -17,5 +17,5 @@ services:
       MYSQL_USER: testuser
       MYSQL_PASSWORD: test1234
       MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3307:3306"
+
+

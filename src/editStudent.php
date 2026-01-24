@@ -7,13 +7,15 @@ $id = $_GET['id'];/*جلب البيانات القديمة */
 $stmt = $db->prepare("SELECT * FROM students WHERE id = ?");
 $stmt->execute([$id]);
 $student = $stmt->fetch(PDO::FETCH_ASSOC);
-
+if (!$student) {
+    die("Student not found");
+}
 if ($_SERVER["REQUEST_METHOD"] === "POST") {/*تخزين البيانات الجديدة*/
     $name = $_POST['name'];
     $major = $_POST['major'];
 
     $stmt = $db->prepare(
-      "UPDATE students SET name = ?, major = ? WHERE id = ?"
+      "UPDATE Students SET name = ?, major = ? WHERE id = ?"
     );
     $stmt->execute([$name,$major,$id]);
   
@@ -38,9 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {/*تخزين البيانات الج
             <h2>Edit Student</h2>
             <form method ="post" action="">
                <label for="">Student Name :</label><br>
-               <input name ="name" type="text" value="<?= $student['name'] ?>"><br><br>
+               <input name ="name" type="text" value="<?= htmlspecialchars($student['name']) ?>"><br><br>
                <label for="">Major :</label><br>
-               <input name = "major"type="text" value="<?= $student['major'] ?>"><br><br>
+               <input name = "major"type="text" value="<?= htmlspecialchars($student['major']) ?>"><br><br>
                <input type="submit" value="Update" id="button1">
                <button id="button2">Cancel</button>
             </form>

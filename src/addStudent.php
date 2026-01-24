@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $major = $_POST["major"];
 
   $stmt = $db->prepare(
-    "INSERT INTO students (name, major) VALUES (?, ?)"
+    "INSERT INTO Students (name, major) VALUES (?, ?)"
   );
   $stmt->execute([$name, $major]);
   header("Location: viewStudents.php");

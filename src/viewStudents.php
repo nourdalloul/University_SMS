@@ -1,6 +1,6 @@
 <?php
 require "DBConnection.php";
-$students = $db->query("SELECT * FROM students")->fetchAll(PDO::FETCH_ASSOC);
+$students = $db->query("SELECT * FROM Students")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
